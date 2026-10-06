@@ -1,0 +1,148 @@
+﻿@model CurriculoViewModel
+
+@{
+    ViewData["Title"] = "Currículo";
+}
+
+<link rel="stylesheet" href="~/css/curriculo.css" />
+
+<div class="curriculo">
+
+    <div class="cabecalho">
+
+        <h1 style="text-align: center;">@Model.nome</h1>
+
+    </div>
+
+
+    <!-- INFORMAÇÕES PESSOAIS -->
+
+    <section>
+
+        <div class="linha"></div>
+        <h3>INFORMAÇÕES PESSOAIS</h3>
+
+        <p>
+            <strong>Localização:</strong> @Model.endereco
+        </p>
+
+        <p>
+           <strong>Contato:</strong> @Model.email | @Model.telefone
+        </p>
+
+        <p>
+            <strong>CPF:</strong> @Model.cpf
+        </p>
+
+        <p>
+            <strong>Data de nascimento:</strong>
+            @Model.dataNascimento.ToString("dd/MM/yyyy")
+        </p>
+
+        <p>
+            <strong>Pretensão salarial:</strong>
+            R$ @Model.pretensaoSalarial.Value.ToString("N2")
+        </p>
+
+    </section>
+
+
+    <!-- RESUMO PROFISSIONAL -->
+
+    <section>
+
+        <div class="linha"></div>
+        <h3>RESUMO PROFISSIONAL</h3>
+
+        <p>@Model.resumoProfissional</p>
+
+        <p>
+            <strong>Cargo Pretendido:</strong>
+            @Model.cargoPretendido
+        </p>
+
+    </section>
+
+
+    <!-- FORMAÇÃO -->
+
+    <section>
+
+        <div class="linha"></div>
+        <h3>FORMAÇÃO ACADÊMICA</h3>
+
+        <p>- @Model.formacao1;</p>
+
+        @if (!string.IsNullOrWhiteSpace(Model.formacao2))
+        {
+            <p>- @Model.formacao2;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.formacao3))
+        {
+            <p>- @Model.formacao3;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.formacao4))
+        {
+            <p>- @Model.formacao4;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.formacao5))
+        {
+            <p>- @Model.formacao5;</p>
+        }
+
+    </section>
+
+
+    <!-- EXPERIÊNCIA -->
+
+    <section>
+
+        <div class="linha"></div>
+        <h3>EXPERIÊNCIA PROFISSIONAL</h3>
+
+        @if (!string.IsNullOrWhiteSpace(Model.experiencia1))
+        {
+            <p>- @Model.experiencia1;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.experiencia2))
+        {
+            <p>- @Model.experiencia2;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.experiencia3))
+        {
+            <p>- @Model.experiencia3;</p>
+        }
+
+    </section>
+
+
+    <!-- IDIOMAS -->
+
+    <section>
+
+        <div class="linha"></div>
+        <h3>IDIOMAS</h3>
+
+        @if (!string.IsNullOrWhiteSpace(Model.idioma1))
+        {
+            <p>- @Model.idioma1;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.idioma2))
+        {
+            <p>- @Model.idioma2;</p>
+        }
+
+        @if (!string.IsNullOrWhiteSpace(Model.idioma3))
+        {
+            <p>- @Model.idioma3;</p>
+        }
+
+    </section>
+
+</div>

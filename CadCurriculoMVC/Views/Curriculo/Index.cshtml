@@ -1,0 +1,50 @@
+﻿@model List<CurriculoViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listagem de Currículos</h2>
+<br />
+
+<a href="/curriculo/create" class = "btn btn-outline-secondary">Novo Registro</a>
+<br />
+<br />
+
+<table class="table table-responsive">
+    <tr>
+        <th>Ações</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        
+    </tr>
+
+    @foreach (var curriculo in Model)
+    {
+        <tr>
+            <td>
+                <a href="/curriculo/Edit?Id=@curriculo.id">
+                    <img src="~/img/editarLogo.png"/>
+                </a>
+
+                <a href="javascript:apagarCurriculo(@curriculo.id)">
+                     <img src="~/img/excluirLogo.png" />
+                 </a>
+
+                 <a asp-action="Curriculo" asp-route-id="@curriculo.id">
+                     <img src="~/img/visualizarLogo.png"/>
+                 </a>
+            </td>
+            <td>@curriculo.nome</td>
+            <td>@curriculo.cpf</td>
+        </tr>
+    }
+</table>
+
+<script>
+    function apagarCurriculo(id)
+    {
+        if(confirm('Confirma a exclusão do registro?'))
+            location.href = 'curriculo/Delete?id=' + id;
+    }
+</script>
+

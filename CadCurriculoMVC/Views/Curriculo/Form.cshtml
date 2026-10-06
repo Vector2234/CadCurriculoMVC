@@ -1,0 +1,96 @@
+﻿@model CurriculoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro de Currículos</h2>
+
+<form action="Salvar" method="post" class = "col-md-6">
+     <label for="id" class="control-label">Id:</label>
+     <input type="number" Name="id" value="@Model.id" class = "form-control"/>
+     <br />
+
+     <label for="nome" class="control-label">Nome Completo:</label>
+     <input type="text" Name="nome" value="@Model.nome" class = "form-control"/>
+     <br />
+
+     <label for="cpf" class="control-label">CPF:</label>
+     <input type="text" Name="cpf" value="@Model.cpf" class = "form-control"/>
+     <br />
+
+     <label for="dataNascimento" class="control-label">Data de Nascimento:</label>
+     <input type="date" Name="dataNascimento" value="@Model.dataNascimento.ToString("yyyy-MM-dd")" class = "form-control"/>
+     <br />
+
+     <label for="endereco" class="control-label">Endereço:</label>
+     <input type="text" Name="endereco" value="@Model.endereco" class = "form-control"/>
+     <br />
+
+     <label for="telefone" class="control-label">Telefone:</label>
+     <input type="text" Name="telefone" value="@Model.telefone" class = "form-control"/>
+     <br />
+
+     <label for="email" class="control-label">Email:</label>
+     <input type="text" Name="email" value="@Model.email" class = "form-control"/>
+     <br />
+
+     <label for="cargoPretendido" class="control-label">Cargo Pretendido:</label>
+     <input type="text" Name="cargoPretendido" value="@Model.cargoPretendido" class = "form-control"/>
+     <br />
+
+     <label for="pretensaoSalarial" class="control-label">Pretensão Salarial:</label>
+     <input type="text" Name="pretensaoSalarial" value="@Model.pretensaoSalarial" class = "form-control"/>
+     <br />
+
+     <label for="resumoProfissional" class="control-label">Resumo Profissional:</label>
+     <input type="text" Name="resumoProfissional" value="@Model.resumoProfissional" class = "form-control"/>
+     <br />
+
+     <label for="formacao1" class="control-label">Formação 1:</label>
+     <input type="text" Name="formacao1" value="@Model.formacao1" class = "form-control"/>
+     <br />
+
+     <label for="formacao2" class="control-label">Formação 2:</label>
+     <input type="text" Name="formacao2" value="@Model.formacao2" class = "form-control"/>
+     <br />
+
+     <label for="formacao3" class="control-label">Formação 3:</label>
+     <input type="text" Name="formacao3" value="@Model.formacao3" class = "form-control"/>
+     <br />
+
+     <label for="formacao4" class="control-label">Formação 4:</label>
+     <input type="text" Name="formacao4" value="@Model.formacao4" class = "form-control"/>
+     <br />
+
+     <label for="formacao5" class="control-label">Formação 5:</label>
+     <input type="text" Name="formacao5" value="@Model.formacao5" class = "form-control"/>
+     <br />
+
+     <label for="experiencia1" class="control-label">Experiência 1:</label>
+     <input type="text" Name="experiencia1" value="@Model.experiencia1" class = "form-control"/>
+     <br />
+
+     <label for="experiencia2" class="control-label">Experiência 2:</label>
+     <input type="text" Name="experiencia2" value="@Model.experiencia2" class = "form-control"/>
+     <br />
+
+     <label for="experiencia3" class="control-label">Experiência 3:</label>
+     <input type="text" Name="experiencia3" value="@Model.experiencia3" class = "form-control"/>
+     <br />
+
+     <label for="idioma1" class="control-label">Idioma 1:</label>
+     <input type="idioma1" Name="idioma1" value="@Model.idioma1" class = "form-control"/>
+     <br />
+
+     <label for="idioma2" class="control-label">Idioma 2:</label>
+     <input type="idioma2" Name="idioma2" value="@Model.idioma2" class = "form-control"/>
+     <br />
+
+     <label for="idioma3" class="control-label">Idioma 3:</label>
+     <input type="idioma3" Name="idioma3" value="@Model.idioma3" class = "form-control"/>
+     <br />
+
+     <input type="submit" value="Salvar dados" class="btn btn-success"/>
+     <a href="javascript:history.back()" class="btn btn-info">Voltar </a>
+     <br />
+</form> 
